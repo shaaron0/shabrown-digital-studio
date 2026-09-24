@@ -1,0 +1,356 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+/* Removes the browser's default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* General website design */
+body {
+    font-family: Arial, sans-serif;
+    color: #1a1a1a;
+    background-color: #ffffff;
+    line-height: 1.6;
+}
+
+/* Navigation area */
+header {
+    background-color: #10234a;
+    padding: 20px 8%;
+    position: sticky;
+top: 0;
+z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2 {
+    color: #f0b94d;
+    font-size: 24px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #f0b94d;
+}
+
+/* Welcome section */
+#home {
+    min-height: 85vh;
+    background: linear-gradient(135deg, #10234a, #2454a6);
+    color: white;
+    padding: 120px 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#home h1 {
+    font-size: 60px;
+    max-width: 700px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+#home p {
+    font-size: 20px;
+    max-width: 700px;
+    margin-bottom: 35px;
+    color: #e1e7f2;
+}
+
+/* Start a Project button */
+#home > a {
+    display: inline-block;
+    width: fit-content;
+    background-color: #f0b94d;
+    color: #10234a;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#home > a:hover {
+    background-color: white;
+}
+/* Services section */
+#services {
+    padding: 90px 8%;
+    background-color: #f4f6fa;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.section-heading p {
+    color: #2454a6;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+
+.section-heading h2 {
+    color: #10234a;
+    font-size: 42px;
+}
+
+.service-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.service-card {
+    background-color: white;
+    padding: 35px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(16, 35, 74, 0.1);
+    border-top: 5px solid #f0b94d;
+}
+
+.service-card h3 {
+    color: #10234a;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: #5b6475;
+}
+
+/* Makes the website fit smaller screens */
+@media (max-width: 700px) {
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #home h1 {
+        font-size: 42px;
+    }
+
+    .service-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* About section */
+#about {
+    padding: 100px 8%;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 70px;
+    align-items: center;
+}
+
+.about-title > p {
+    color: #2454a6;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+.about-title h2 {
+    color: #10234a;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.about-text p {
+    color: #5b6475;
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+/* About section on smaller screens */
+@media (max-width: 700px) {
+    #about {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .about-title h2 {
+        font-size: 34px;
+    }
+}
+/* Contact section */
+#contact {
+    margin: 30px 8% 80px;
+    padding: 80px 8%;
+    background-color: #10234a;
+    color: white;
+    text-align: center;
+    border-radius: 25px;
+}
+
+.contact-label {
+    color: #f0b94d;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 15px;
+}
+
+#contact h2 {
+    font-size: 46px;
+    margin-bottom: 20px;
+}
+
+.contact-message {
+    max-width: 650px;
+    margin: 0 auto 35px;
+    color: #dce4f2;
+    font-size: 18px;
+}
+
+.contact-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 35px;
+}
+
+.contact-buttons a {
+    background-color: #f0b94d;
+    color: #10234a;
+    padding: 14px 28px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.contact-buttons a:hover {
+    background-color: white;
+}
+
+.contact-details {
+    color: #dce4f2;
+}
+
+/* Contact section on smaller screens */
+@media (max-width: 700px) {
+    #contact {
+        margin: 20px;
+        padding: 60px 25px;
+    }
+
+    #contact h2 {
+        font-size: 34px;
+    }
+}
+/* Portfolio section */
+#portfolio {
+    padding: 100px 8%;
+    background-color: white;
+}
+
+.portfolio-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.portfolio-card {
+    min-height: 260px;
+    background: linear-gradient(145deg, #10234a, #2454a6);
+    color: white;
+    padding: 40px 30px;
+    border-radius: 18px;
+    border-bottom: 6px solid #f0b94d;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+}
+
+.portfolio-card h3 {
+    color: #f0b94d;
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.portfolio-card p {
+    color: #e1e7f2;
+    font-size: 17px;
+}
+
+/* Portfolio section on smaller screens */
+@media (max-width: 800px) {
+    .portfolio-container {
+        grid-template-columns: 1fr;
+    }
+}
+/* Website footer */
+footer {
+    background-color: #09172f;
+    color: #dce4f2;
+    padding: 30px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 25px;
+}
+
+.footer-links a {
+    color: #f0b94d;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+/* Footer on smaller screens */
+@media (max-width: 700px) {
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+.portfolio-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 10px;
+    margin-bottom: 25px;
+}
